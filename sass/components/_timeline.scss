@@ -1,0 +1,42 @@
+.c-timeline {
+	position: relative;
+	
+	&:before {
+		position: absolute;
+		left: 20px;
+		top: 5px;
+		display: block;
+		content: ' ';
+		width: 2px;
+		height: 100%;
+		border-left: 2px dotted #e5e4e2;
+	}
+	
+	dt {
+		@include antialias;
+		float: left;
+		position: relative;
+		width: 120px;
+		padding-left: 50px;
+		font: {
+			size: em(18);
+			weight: $bold;
+		}
+		
+		&:before {
+			@include border-radius( 50% );
+			position: absolute;
+			left: 14px; top: 5px;
+			display: block;
+			width: 15px; height: 15px;
+			background-color: white;
+			border: 2px solid #aba59b;
+			content: ' ';
+		}
+	}
+	
+	dd {
+		float: left;
+		width: 960px;
+	}
+}

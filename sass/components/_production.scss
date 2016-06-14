@@ -1,0 +1,26 @@
+.c-production {
+	
+	h5 {
+		margin-bottom: 15px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid rgba($gray--darker, .5);
+	}
+	
+	p {
+		font-size: em(12);
+	}
+	
+	&__image {
+		float: left;
+		width: 180px;
+	}
+	
+	&__item {
+		margin-bottom: 10px;
+	}
+	
+	&__text {
+		float: left;
+		width: 900px;
+	}
+}

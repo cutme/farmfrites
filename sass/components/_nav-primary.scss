@@ -1,0 +1,23 @@
+.c-nav-primary {
+	position: absolute;
+	top: 0;
+	right: 80px;
+	
+	li {
+		float: left;		
+	}
+
+	a {
+		display: block;
+		padding: 0 10px;
+		height: 72px;
+		text-transform: uppercase;
+		line-height: 72px;
+		color: $orange;
+		
+		&:hover  {
+			background-color: $gray;
+			color: $gray--darker;
+		}
+	}
+}

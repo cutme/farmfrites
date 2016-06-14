@@ -1,0 +1,9 @@
+.o-download {
+	position: absolute;
+	font-size: em(32);
+	color: #f9b31f;
+	
+	&:hover {
+		color: $orange;
+	}
+}

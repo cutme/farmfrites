@@ -1,0 +1,23 @@
+.o-button {
+	@include transition-property(all);
+	@include transition-duration(1s);
+	-webkit-backface-visibility: hidden;
+	position: relative;
+	display: inline-block;
+	
+	&:hover {
+		.no-mobile & {
+			border-color: transparent !important;		
+			color: white;
+
+			&:after,
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+	
+	&:active {
+
+	}
+}

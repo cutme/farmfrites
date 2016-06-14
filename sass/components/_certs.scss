@@ -1,0 +1,44 @@
+.c-certs {
+	position: relative;
+	display: table;
+	width: 100%;
+	
+	dl {
+		display: table-row;
+	}
+	
+	dt,
+	dd {
+		display: table-cell;
+		padding-bottom: 50px;
+		vertical-align: top;
+	}
+	
+	dd {
+		padding-left: 40px;
+	}
+	
+	p {
+		position: relative;
+		padding-right: 100px;
+		font-size: em(12);
+	}
+	
+	&__doc {
+		@include border-radius( 50% );
+		width: 116px; height: 116px;
+		border: 2px solid $orange;
+		overflow: hidden;
+	}
+	
+	.icon-search {
+		position: absolute;
+		right: 0; top: 0;
+		font-size: em(40);
+		color: #f9b31f;
+	
+		&:hover {
+			color: $orange;
+		}
+	}
+}

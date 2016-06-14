@@ -1,0 +1,31 @@
+.o-header {
+	@include serif;
+	margin-bottom: 40px;
+	
+	h1 {
+		position: relative;
+		font-size: em(30);
+
+		.c-proloque & {
+			margin-bottom: 50px;
+
+			&:after {
+				position: absolute;
+				left: 0; bottom: -20px;
+				display: block;
+				content: ' ';
+				width: 200px;
+				height: 2px;
+				background-color: white;
+			}
+		}
+	}
+
+	h2 {
+		font-size: em(36);
+	}
+	
+	h3 {
+		font-size: em(30);
+	}
+}

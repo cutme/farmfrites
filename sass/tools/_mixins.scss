@@ -1,0 +1,82 @@
+@mixin animfix {
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+}
+
+@mixin antialias {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font-face-db( $font-name, $font-filename, $font-weight: normal ){
+  @font-face {
+    font-family: $font-name;
+    src: url('../fonts/' + $font-filename + '.eot');
+    src: url('../fonts/' + $font-filename + '.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/' + $font-filename + '.woff') format('woff'),
+         url('../fonts/' + $font-filename + '.ttf') format('truetype'),
+         url('../fonts/' + $font-filename + '.svg#' + $font-filename ) format('svg');
+    font-weight: $font-weight;
+    font-style: normal;
+  }
+}
+
+@mixin gradient( $start, $stop: darken( $start, 8% ), $dir: top ){
+	$experimental-support-for-svg: true;
+	@include background( linear-gradient( 90deg, $start, $stop ) );
+	@include filter-gradient($start, $stop, $dir);
+}
+
+@mixin hover {
+	@include transition-property(all);
+	@include transition-duration(300ms);
+	@include transition-timing-function(ease-in-out);
+
+}
+
+@mixin icomoon {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin input-placeholder($selector: "") {
+	@if $experimental-support-for-webkit {
+		#{$selector}::-webkit-input-placeholder { @content; }
+	}
+	@if $experimental-support-for-mozilla {
+		#{$selector}:-moz-placeholder { @content; }
+	}
+	@if $experimental-support-for-microsoft {
+		#{$selector}:-ms-input-placeholder { @content; }
+	}
+}
+
+$prefixes: ("-webkit-","-moz-", "-o-", "");
+@mixin selection($color, $background) {
+    @each $prefix in $prefixes {
+        ::#{$prefix}selection {
+            color: $color;
+            background: $background;
+        }
+    }
+}
+
+@mixin serif {
+	@include antialias;
+	font: {
+		family: $serif;
+		weight: $regular;
+	}
+	line-height: 1.2;
+}

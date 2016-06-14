@@ -1,0 +1,44 @@
+.c-footer {
+	border-top: 20px solid $orange--brightest;
+	background-image: url(../img/bg-noise.jpg);
+	padding: 30px 0;
+	color: white;
+	
+	a {
+		color: white;
+
+		&:hover {
+			color: $orange--brightest;
+		}
+	}
+	
+	&__bottom {
+		margin-bottom: 20px;
+		font-size: em(11);
+		color: #d4d4d4;
+	}
+	
+	&__content {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid rgba(white, .25);
+	}
+	
+	&__item {
+		float: left;
+		padding: 0 15px;
+		border-right: 1px solid rgba(white, .25);
+		
+		&:first-child {
+			padding-left: 0;
+		}
+		
+		&:last-child {
+			border: none;
+		}
+	}
+	
+	&__copyrights {
+		font-size: em(12);
+	}
+}

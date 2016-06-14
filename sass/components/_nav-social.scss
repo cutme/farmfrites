@@ -1,0 +1,23 @@
+.c-nav-social {
+	position: absolute;
+	right: 0; top: 0;
+	
+	li {
+		float: left;
+		margin-left: 10px;
+		
+		[class^="icon-"] {
+			@include border-radius( 50% );
+			display: inline-block;
+			width: 32px; height: 32px;
+			border: 2px solid white;
+			text-align: center;
+			line-height: 28px;
+			font-size: em(18);
+			
+			&:hover {
+				border-color: $orange--brightest;
+			}
+		}
+	}
+}

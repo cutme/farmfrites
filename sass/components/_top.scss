@@ -1,0 +1,13 @@
+.c-top {
+	position: relative;
+	overflow: hidden;
+	margin-top: 72px;
+
+	&--home {
+		height: 525px;
+	}
+	
+	&--page {
+		min-height: 250px;
+	}
+}
