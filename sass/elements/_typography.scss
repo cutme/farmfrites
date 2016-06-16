@@ -18,3 +18,7 @@ a {
 		@include hover;
 	}
 }
+
+strong {
+	font-weight: $bold;
+}

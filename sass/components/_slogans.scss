@@ -1,8 +1,7 @@
 .c-slogans {
-	position: absolute;
-	left: 0; top: 100px;
-	width: 100%;
+	position: relative;
 	z-index: 10;
+	text-align: center;
 	color: white;
 	
 	p {
@@ -31,7 +30,6 @@
 		position: relative;
 		width: 270px;
 		padding-top: 140px;
-		text-align: center;
 		cursor: pointer;
 	}
 	
@@ -39,7 +37,8 @@
 		@include border-radius( 50% );
 		top: 0; z-index: 10;
 		display: inline-block;
-		width: 120px; height: 120px;
+		width: 120px;
+		height: 120px;
 		border: 2px solid white;
 		margin-bottom: 20px;
 		line-height: 110px;
@@ -53,7 +52,7 @@
 		position: absolute;
 		top: -25px; left: 6px;
 		z-index: 5;
-		width: 258px; height: 258px;
+		width: 100%; height: 258px;
 		background-color: black;
 		overflow: hidden;
 		
@@ -75,36 +74,109 @@
 	p {
 		position: relative; z-index: 10;
 		display: inline-block;
-		width: 200px;
+		width: grid(200, 270);
 	}
 	
-	.icon-production {
+	.icon-production, .icon-environment {
 		font-size: em(64);
-	}
-
-	
-	.icon-environment {
-		line-height: 120px;
-		font-size: em(60);
 	}
 	
 	.is-active {
-		border: none;
-		padding-top: 100px;
-		
-		.c-slogans__photo {
-			@include transform(rotate(0) scale(1));
-			@include opacity(1);
+		@media screen and ( min-width: 768px ) {
+			border: none;
+			padding-top: 100px;
+			
+			.c-slogans__photo {
+				@include transform(rotate(0) scale(1));
+				@include opacity(1);
+			}
+			
+			.c-slogans__title {
+			    border: none;
+			    margin-bottom: 80px;
+				font-size: em(36);
+			}
+			
+			[class^="icon-"] {
+				border: none;
+			}
 		}
-		
-		.c-slogans__title {
-		    border: none;
-		    margin-bottom: 80px;
-			font-size: em(36);
+	}
+	
+	@media screen and ( min-width: 768px ) {
+		@include scut-center-transform(y);
+		left: 0;
+		width: 100%;
+
+		&__item {
+			width: grid(270);
 		}
 		
 		[class^="icon-"] {
-			border: none;
+			width: grid(120, 270);
+		}
+	}
+	
+	@media screen and ( min-width: 768px ) and ( max-width: $grid-base-width+px ) {
+
+		&__item {			
+			&.is-active {
+				padding-top: 9vw !important;
+				
+				.c-slogans__title {
+					font-size: 3.2vw !important;
+				}
+			}
+		}
+	}
+	
+	@media screen and ( min-width: 768px ) and ( max-width: $grid-base-width+px ) {
+
+		&__item {
+			padding-top: 13vw;
+		}
+
+		&__photo {
+			height: 24vw;
+		}
+		
+		&__title {
+			font-size: 2.8vw;
+		}
+		
+		[class^="icon-"] {
+			height: 11vw;
+			font-size: 5vw;
+			line-height: 11vw;
+		}
+		
+		p {
+			font-size: 1.5vw;
+		}
+		
+		.icon-production, .icon-environment {
+			font-size: 6vw;
+		}
+	}
+
+	@media screen and ( max-width: 767px ) {
+
+		&__item {
+			float: none;
+			width: 49%;
+			display: inline-block;
+			margin-bottom: 40px;
+			vertical-align: top;
+			
+			&:nth-child(2n+1) {
+				//clear: left;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 540px ) {
+		&__item {
+			width: 100%;
 		}
 	}
 }

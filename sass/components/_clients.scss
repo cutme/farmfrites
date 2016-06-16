@@ -67,4 +67,18 @@
 			@include scut-center-transform;
 		}
 	}
+	
+	@media screen and ( max-width: 580px ) {
+		display: block;
+
+		&__details,
+		&__text {
+			display: block;
+			width: 100%;
+		}
+		
+		&__text {
+			padding-left: 0;
+		}
+	}
 }

@@ -1,7 +1,7 @@
 .c-news {
 	&__content {
 		position: relative; z-index: 5;
-		width: 620px;
+		width: grid(620);
 		background-color: $orange--brighter;
 		padding: 20px 30px;
 		line-height: 1.6;
@@ -20,10 +20,11 @@
 		margin-bottom: 20px;
 
 		h3 {
+			line-height: 1.2;
 			font-size: em(24);
 		}
 	}
-	
+
 	&__item {
 		@include border-radius;
 		position: relative; z-index: 5;
@@ -55,13 +56,43 @@
 		text-align: right;
 		font-size: em(12);
 	}
+
+	@media screen and ( max-width: $grid-base-width + px ) {
+		.o-cover--vert {
+			width: auto;
+			height: 100%;
+		}
+	}
 	
-	&__photo {
-		@include border-bottom-right-radius;
-		@include border-top-right-radius
-		position: absolute;
-		top: 0; right: 0;
-		width: 460px; height: 100%;
-		overflow: hidden;
+	@media screen and ( min-width: 769px ) {
+		&__photo {
+			@include border-bottom-right-radius;
+			@include border-top-right-radius
+			position: absolute;
+			top: 0; right: 0;
+			width: grid(460); height: 100%;
+			overflow: hidden;
+		}
+	}
+	
+	@media screen and ( max-width: 768px ) {
+		&__item {
+			max-width: 460px;
+			margin: 0 auto;
+		}
+
+		&__content {
+			width: 100%;
+			padding: 20px;
+		}
+		
+		.o-cover {
+			@include transform(translate(0,0 ));
+			position: relative;
+			left: auto;
+			top: auto;
+			max-width: 100%;
+			height: auto;
+		}
 	}
 }

@@ -2,7 +2,7 @@
 	
 	&__item {
 		float: left;
-		width: 540px;
+		width: grid(540);
 		padding-bottom: 50px;
 		
 		&:nth-child(even) {
@@ -20,12 +20,13 @@
 	
 	&__text {
 		float: left;
-		width: 390px;
-		padding-left: 30px;
+		width: grid(390, 540);
+		padding-left: grid(30, 390);
 	}
 	
 	&__details {
 		position: relative;
+		padding-right: 40px;
 		font-size: em(12);
 		color: #69655d;
 	}
@@ -44,6 +45,55 @@
 	.o-download {
 		right: 0; top: 5px;
 	}
+	
+	@media screen and ( max-width: $grid-base-width + px ) {
+		.icon-files {
+			width: grid(120, 540);
+			height: 11vw;
+			font-size: 8vw;
+			line-height: 10.8vw;
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+	
+		&__item {
+			&:nth-child(odd) {
+				padding-right: 29px;
+			}
+		}
+
+		&__text {
+			float: none;
+			width: 100%;
+			padding-left: 0;
+		}
+
+		.icon-files {
+			display: none;
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+	
+		&__item {
+			float: none;
+			width: 100%;
+			padding: 0;
+			margin-bottom: 20px;
+			
+			&:nth-child(odd) {
+				padding: 0;
+			}
+			
+			&:nth-child(even) {
+				float: none;
+				border: none;
+				padding: 0;;
+			}
+		}
+	}
+	
 }
 
 .c-files-list {
@@ -61,7 +111,7 @@
 		cursor: pointer;
 		
 		&:hover {
-			@include gradient(#fa9017, #ef7411, 90deg);
+			@include gradient(#fa9017, #ef7411, 180deg);
 			color: white;
 			
 			.icon-files,

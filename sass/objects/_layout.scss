@@ -1,5 +1,8 @@
 .o-layout {
-	padding: {
-		top: 50px;
+	padding-top: 50px;
+	
+	@media screen and ( max-width: 480px ) {
+		//padding-top: 25px;
 	}
+	
 }

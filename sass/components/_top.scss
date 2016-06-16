@@ -1,13 +1,22 @@
 .c-top {
 	position: relative;
 	overflow: hidden;
-	margin-top: 72px;
+	//margin-top: 72px;
 
 	&--home {
-		height: 525px;
+		min-height: 525px;
+		
+		@media screen and ( max-width: 767px ) {
+			min-height: 100px;
+			padding-top: 40px;
+		}		
 	}
 	
 	&--page {
 		min-height: 250px;
+		
+		@media screen and ( max-width: 480px ) {
+			min-height: 200px;
+		}		
 	}
 }

@@ -1,5 +1,13 @@
 .c-regular {
 
+	a {
+		color: $orange;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
 	p {
 		padding-bottom: 1.5em;
 	}

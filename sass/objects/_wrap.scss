@@ -6,4 +6,18 @@
 		left: auto;
 		right: auto;
 	}
+	
+	@media screen and ( max-width: $grid-base-width+px ) {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		padding: {
+			left: 10px;
+			right: 10px;
+		}
+	}
 }

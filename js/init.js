@@ -1,4 +1,21 @@
-head.js('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+head.js('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', function() {
+
+		function exist(o) {
+			d = ($(o).length > 0) ? true : false;
+			return d;
+		}
+		
+		exist('select') && head.js('js/jquery.nice-select.min.js', function() {
+			$('select').niceSelect();
+		});
+		
+		function owl_load() {
+			head.load('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.5/assets/owl.carousel.min.css');
+			head.js('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.5/owl.carousel.min.js');
+		}
+		
+		exist('.owl-carousel') && owl_load();	
+	})
 	.js('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
 	.js('js/main.js');
 

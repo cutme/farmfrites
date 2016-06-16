@@ -1,5 +1,6 @@
 .c-production {
-	
+	display: table;
+
 	h5 {
 		margin-bottom: 15px;
 		padding-bottom: 10px;
@@ -11,7 +12,7 @@
 	}
 	
 	&__image {
-		float: left;
+		display: table-cell;
 		width: 180px;
 	}
 	
@@ -20,7 +21,15 @@
 	}
 	
 	&__text {
-		float: left;
-		width: 900px;
+		display: table-cell;
+		vertical-align: top;
 	}
+	
+	@media screen and ( max-width: 375px ) {
+		&__image {
+			width: 100px;
+			padding-right: 20px;
+		}
+	}
+	
 }

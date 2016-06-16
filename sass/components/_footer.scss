@@ -41,4 +41,24 @@
 	&__copyrights {
 		font-size: em(12);
 	}
+	
+	@media screen and ( max-width: 640px ) {
+		&__item {
+			margin-bottom: 20px;
+
+			&:nth-child(2) {
+				border: none;
+			}
+
+			&:last-child {
+				@include clear;
+				float: none;
+				width: 100%;
+				text-align: center;
+				border-top: 1px solid rgba(white, .25);
+				margin: 0;
+				padding-top: 20px;
+			}
+		}
+	}
 }

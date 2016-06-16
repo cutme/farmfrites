@@ -20,4 +20,9 @@
 			color: $gray--darker;
 		}
 	}
+	
+	@media screen and ( max-width: 475px ) {
+		display: none;
+	}
+	
 }

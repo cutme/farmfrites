@@ -1,11 +1,20 @@
 .c-nav-footer {
-	li {
-		float: left;
-	}
 
 	a {
 		display: block;
 		padding: 0 10px;
 		text-transform: uppercase;		
+	}
+	
+	@media screen and ( min-width: 800px ) {
+		li {
+			float: left;
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		li {
+			text-align: center;
+		}
 	}
 }

@@ -9,6 +9,7 @@
 @import "tools/mixins";
 @import "tools/scut";
 @import "tools/flexbox";
+@import "tools/nice-select";
 
 @import "generic/box-sizing";
 
@@ -18,20 +19,25 @@
 @import "elements/page";
 @import "elements/typography";
 
+@import "objects/column";
 @import "objects/download";
 @import "objects/header";
 @import "objects/icons";
 @import "objects/layout";
 @import "objects/media";
+@import "objects/page";
 @import "objects/typography";
 @import "objects/wrap";
 
 @import "components/certs";
 @import "components/clients";
+@import "components/contact-form";
 @import "components/filelist";
 @import "components/footer";
 @import "components/logo";
+@import "components/map";
 @import "components/nav-footer";
+@import "components/nav-panel";
 @import "components/nav-primary";
 @import "components/nav-social";
 @import "components/nav-trigger";

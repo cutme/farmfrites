@@ -25,7 +25,7 @@
 
 @mixin gradient( $start, $stop: darken( $start, 8% ), $dir: top ){
 	$experimental-support-for-svg: true;
-	@include background( linear-gradient( 90deg, $start, $stop ) );
+	@include background( linear-gradient( $dir, $start, $stop ) );
 	@include filter-gradient($start, $stop, $dir);
 }
 

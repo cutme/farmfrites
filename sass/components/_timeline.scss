@@ -1,5 +1,6 @@
 .c-timeline {
 	position: relative;
+	display: table;
 	
 	&:before {
 		position: absolute;
@@ -14,7 +15,8 @@
 	
 	dt {
 		@include antialias;
-		float: left;
+		//float: left;
+		display: table-cell;
 		position: relative;
 		width: 120px;
 		padding-left: 50px;
@@ -36,7 +38,8 @@
 	}
 	
 	dd {
-		float: left;
-		width: 960px;
+		//float: left;
+		display: table-cell;
+		//width: grid(960);
 	}
 }

@@ -1,0 +1,8 @@
+.o-page {
+	padding-top: 72px;
+
+	&.is-moved {
+		@include transform(translate(-360px, 0));
+		
+	}
+}

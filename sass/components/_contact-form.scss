@@ -1,0 +1,14 @@
+.c-contact-form {
+	&__message {
+		padding: 25px;
+		padding-bottom: 0;
+		
+		&--error {
+			background-color: $orange--brighter;
+		}
+	}
+	
+	&__row {
+		margin-bottom: 40px;
+	}
+}

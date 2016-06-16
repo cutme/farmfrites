@@ -1,23 +1,9 @@
 .c-team {
-	&__column {
-		float: left;
-		
-		&--left {
-			width: 540px;
-		}
-		
-		&--right {
-			float: right;
-			width: 480px;
-			border-left: 1px solid rgba($gray--darker, .5);
-			padding-left: 70px; 
-		}
-	}
 	
 	&__photos {
 		li {
 			float: left;
-			width: 230px;
+			width: grid(230, 520);
 			margin-bottom: 80px;
 			text-align: center;
 			
@@ -26,7 +12,7 @@
 			}
 			
 			&:nth-child(2n+1) {
-				clear: left;
+			//	clear: left;
 			}
 		}
 		
@@ -56,6 +42,32 @@
 		font: {
 			style: italic;
 			size: em(16);
+		}
+	}
+	
+	.o-media {
+		margin: 0 auto;
+	}
+	
+	
+	@media screen and ( max-width: 480px ) {
+		&__photos {
+			li {
+				float: none;
+				width: 49%;
+				padding: 0 10px;
+				display: inline-block;
+				margin-bottom: 40px;
+				vertical-align: top;
+				
+				&:nth-child(even) {
+					float: none;
+				}
+			}
+		}
+
+		&__name {
+			font-size: em(14);
 		}
 	}
 	
