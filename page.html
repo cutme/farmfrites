@@ -11,399 +11,488 @@
 
 <body>
 
-<div class="o-page">
-
 	<div class="c-topbar">
-		<a href="#" class="c-logo u-posy">
-			<img src="img/svg/ff-color.svg" alt="farm frites poland" class="o-media" />
-		</a>
-		
-		<span class="c-nav-trigger u-posy">
-			<svg class="inline-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  width="36px" height="36px" viewBox="0 0 32 22.5" enable-background="new 0 0 32 22.5" xml:space="preserve">
-				<title>Mobile Menu</title>
-				<g class="svg-menu-toggle">
-					<path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0 c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z">
-					</path>
+		<div class="c-topbar__content">
+			<a href="#" class="c-logo u-posy">
+				<img src="img/svg/ff-color.svg" alt="farm frites poland" class="o-media" />
+			</a>		
+	
+			<div class="o-wrap">			
+				<nav class="c-nav-primary">
+					<ul>
+						<li>
+							<a href="#">homepage</a>
+						</li>
+						
+						<li class="is-active">
+							<a href="#">company</a>
+						</li>
+						
+						<li>
+							<a href="#">production</a>
+						</li>
+					</ul>
+				</nav>
 			
-					<path class="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z">
-					</path>
-					
-					<path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0 c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z">
-					</path>
-			
-					<rect width="36" height="36" fill="none"></rect>
-				</g>
-			</svg>
-		</span>
-		
-		<div class="o-wrap">			
-			<nav class="c-nav-primary">
-				<ul>
-					<li>
-						<a href="#">homepage</a>
-					</li>
-					
-					<li>
-						<a href="#">company</a>
-					</li>
-					
-					<li>
-						<a href="#">production</a>
-					</li>
-				</ul>
-			</nav>
-		
+			</div>
 		</div>
 	</div>
+
+
+	<span class="c-nav-trigger js-nav">
+		<svg class="inline-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  width="36px" height="36px" viewBox="0 0 32 22.5" enable-background="new 0 0 32 22.5" xml:space="preserve">
+			<title>Mobile Menu</title>
+			<g class="svg-menu-toggle">
+				<path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0 c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z">
+				</path>
+		
+				<path class="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z">
+				</path>
+				
+				<path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0 c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z">
+				</path>
+		
+				<rect width="36" height="36" fill="none"></rect>
+			</g>
+		</svg>
+	</span>
+
+
+	<div class="c-nav-panel">
+		<div class="c-nav-panel__top">
+			<span href="#" class="c-logo">
+				<img src="img/svg/ff-white.svg" alt="farm frites poland" class="o-media" />
+			</span>
+		</div>
+
+		<ul class="c-nav-panel__menu">
+			<li class="is-active">
+				<a href="#" class="has-submenu">company</a>
+				
+				<ul class="sub-menu">
+					<li data-id="our-mission">
+						<a href="#">Our mission</a>
+					</li>
+					
+					<li data-id="history-and-facts">
+						<a href="#">History and facts</a>
+					</li>
+					
+					<li data-id="certificates-and-rewards">
+						<a href="#">Certificates and rewards</a>
+					</li>
+
+					<li data-id="clients">
+						<a href="#">Clients</a>
+					</li>
+				</ul>
+			</li>
+			
+			
+			<li>
+				<a href="#" class="has-submenu">production</a>
+				
+				<ul class="sub-menu">
+					<li data-id="fries-production-cycle">
+						<a href="production.html">Fries production cycle</a>
+					</li>
+					
+					<li data-id="pancakes-production-cycle">
+						<a href="#">Pancakes production cycle</a>
+					</li>
+					
+					<li data-id="quality">
+						<a href="#">Quality</a>
+					</li>
+					
+					<li data-id="quality-and-food-safety-policy">
+						<a href="#">Quality and Food Safety Policy</a>
+					</li>
+					
+					<li data-id="other-submenu-1">
+						<a href="#">Other submenu 1</a>
+					</li>
+					
+					<li data-id="other-submenu-2">
+						<a href="#">Other submenu 2</a>
+					</li>
+					
+					<li data-id="other-submenu-3">
+						<a href="#">Other submenu 3</a>
+					</li>
+				</ul>
+			</li>
+			
+			
+			<li>
+				<a href="#" class="has-submenu">Environment</a>
+				
+				<ul class="sub-menu">
+					<li data-id="environment">
+						<a href="#">Environment</a>
+					</li>
+					
+					<li data-id="environment-policy">
+						<a href="#">Environment Policy</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="o-page">
+
+		<div class="c-top c-top--page">
+			<div class="o-wrap">
 	
+				<div class="c-proloque">
+					<div class="o-header">
+						<h1>About the company</h1>
+					</div>
+					
+					<p>Farm Frites Poland SA (FFP) is one of the leading producers of frozen French fries in central and eastern Europe. It was established in 1993 as a joint venture of two Dutch potato processing producers: Farm Frites and Aviko.</p>
+				</div>
+			</div>
+			
+			<img src="img/top/page.jpg" alt="home" width="1280" height="250" class="o-cover" />
+		</div>
 
-	<div class="c-top c-top--page">
-		<div class="o-wrap">
 
-			<div class="c-proloque">
+		<div class="c-regular c-regular--bigger u-bg-orange u-buffer u-align-center o-layout js-section" id="our-mission">
+			<div class="o-wrap">
 				<div class="o-header">
-					<h1>About the company</h1>
+					<h2>Our mission &amp; vision</h2>
 				</div>
 				
-				<p>Farm Frites Poland SA (FFP) is one of the leading producers of frozen French fries in central and eastern Europe. It was established in 1993 as a joint venture of two Dutch potato processing producers: Farm Frites and Aviko.</p>
-			</div>
-		</div>
-		
-		<img src="img/top/page.jpg" alt="home" width="1280" height="250" class="o-cover" />
-	</div>
-
-	
-	<div class="c-regular c-regular--bigger u-bg-orange u-buffer--half u-align-center o-layout">
-		<div class="o-wrap">
-			<div class="o-header">
-				<h2>Our mission &amp; vision</h2>
-			</div>
-			
-			<blockquote>
+				<blockquote>
+					<p>
+		What we do, we do well.<br />
+		What we do well, we can probably do better <br />
+		- together.
+					</p>
+				</blockquote>
+				
 				<p>
-	What we do, we do well.<br />
-	What we do well, we can probably do better <br />
-	- together.
+		We are the leading producer of potato products.<br />
+		We come up to our clients’ expectations.<br />
+		We respect our employees, partners and Clients.<br />
+		We care for the environment.
 				</p>
-			</blockquote>
-			
-			<p>
-	We are the leading producer of potato products.<br />
-	We come up to our clients’ expectations.<br />
-	We respect our employees, partners and Clients.<br />
-	We care for the environment.
-			</p>
-		</div>
-	</div>
-	
-	
-	<div class="c-regular u-buffer--half o-layout">
-		<div class="o-wrap">
-			<div class="o-header u-align-center">
-				<h2>History and facts</h2>
 			</div>
-			
-			<blockquote>
-				<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at faucibus lacus. Nulla vel convallis lacus. Cras nec efficitur dui. Maecenas placerat purus tellus, quis molestie nisl rhoncus vitae. Proin iaculis nisi et convallis placerat. Maecenas felis mauris,				</p>
-			</blockquote>
-			
-			<div class="c-timeline">
-				<dl class="clear">
-					<dt>1993</dt>
-					
-					<dd>
-						<p>
-It was established in 1993 as a joint venture of two Dutch potato processing producers: Farm Frites and Aviko. A factory was built and a line of French fries initiated in the autumn of 1994, within twelve months  of the start of construction.
-The decision to locate the factory in Lębork was influenced by the favourable climate and appropriate soil conditions classified as "First Zone for Healthy Potatoes". An added bonus was Lębork authorities' positive approach to the venture which they recognized as a development opportunity for the town.
-						</p>
-					</dd>
-				</dl>
-				
-				<dl class="clear">
-					<dt>1994</dt>
-					
-					<dd>
-						<p>
-Initially, FFP employed 80 workers, including a few specialists from Holland who were responsible for implementing the  international production standards and for training their Polish successors. The annual potato processing amounted to 40.000 tons.
-						</p>
-					</dd>
-				</dl>
-				
-				<dl class="clear">
-					<dt>2004</dt>
-					
-					<dd>
-						<p>
-In July 2004, a new line for potato pancakes was introduced and in July 2011, a new line for potato flakes. Currently, three modern production lines enable the factory to process around 60 different types of product, which find their way to the tables of individual consumers and restaurants in numerous European countries and beyond.<br />
-At present, there are 211 people working at Farm Frites Poland SA, and the amount of potatoes used for production annually exceeds 200.000 tons.					
-						</p>
-					</dd>
-				</dl>
-				
-				<dl class="clear">
-					<dt>2008</dt>
-					
-					<dd>
-						<p>
-Since 2008, FFP has been a member of European Potato Processors' Association (EUPPA) and Sustainable Agriculture Initiative (SAI) Platform.
-With our presence on the market for many years, our company still has many new ideas and ventures we hope to embark upon. With the experience and strong technical support we have at hand, and our wonderful workforce, we are confident we will be able to satisfy the evolving needs of customers expectations												</p>
-					</dd>
-				</dl>
-			</div>
-			
-			
-			
-			
 		</div>
-	</div>
-	
-	
-	<div class="o-wrap o-layout">
-		<div class="o-header u-align-center">
-			<h2>Certificates and rewards</h2>
-		</div>
-		
-		<div class="c-regular u-buffer--quarter">
-			<blockquote>
-				<p>
+
+
+		<div class="c-regular u-buffer--half o-layout js-section" id="history-and-facts">
+			<div class="o-wrap">
+				<div class="o-header u-align-center">
+					<h2>History and facts</h2>
+				</div>
+				
+				<blockquote>
+					<p>
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at faucibus lacus. Nulla vel convallis lacus. Cras nec efficitur dui. Maecenas placerat purus tellus, quis molestie nisl rhoncus vitae. Proin iaculis nisi et convallis placerat. Maecenas felis mauris,				</p>
-			</blockquote>
-		</div>
-		
-		<div class="c-certs">
-			<dl>
-				<dt>
-					<div class="c-certs__doc">
-						<img src="img/_cert.jpg" alt="" class="o-media" />
-					</div>
-				</dt>
+				</blockquote>
 				
-				<dd>
-					<h5 class="u-bb">Quality Management - BS EN ISO 22000:2005</h5>
-					<p>
-					Issued in September 2010 by SAI Global and recirtified in June 2013. It confirms that our company meets the highest standards relating to the food safety. 
-						<a href="#" class="icon-search"></a>
-					</p>
-				</dd>
-			</dl>
-			
-			<dl>
-				<dt>
-					<div class="c-certs__doc">
-						<img src="img/_cert.jpg" alt="" class="o-media" />
-					</div>
-				</dt>
-				
-				<dd>
-					<h5 class="u-bb">Quality Management - BS EN ISO 22000:2005</h5>
-					<p>
-					Issued in September 2010 by SAI Global and recirtified in June 2013. It confirms that our company meets the highest standards relating to the food safety. 
-						<a href="#" class="icon-search"></a>
-					</p>
-				</dd>
-			</dl>
-			
-			<dl>
-				<dt>
-					<div class="c-certs__doc">
-						<img src="img/_cert.jpg" alt="" class="o-media" />
-					</div>
-				</dt>
-				
-				<dd>
-					<h5 class="u-bb">Quality Management - BS EN ISO 22000:2005</h5>
-					<p>
-					Issued in September 2010 by SAI Global and recirtified in June 2013. It confirms that our company meets the highest standards relating to the food safety. 
-						<a href="#" class="icon-search"></a>
-					</p>
-				</dd>
-			</dl>
-			
-			<dl>
-				<dt>
-					<div class="c-certs__doc">
-						<img src="img/_cert.jpg" alt="" class="o-media" />
-					</div>
-				</dt>
-				
-				<dd>
-					<h5 class="u-bb">Quality Management - BS EN ISO 22000:2005</h5>
-					<p>
-					Issued in September 2010 by SAI Global and recirtified in June 2013. It confirms that our company meets the highest standards relating to the food safety. 
-						<a href="#" class="icon-search"></a>
-					</p>
-				</dd>
-			</dl>
-		</div>
-	</div>
-	
-	
-	<div class="o-wrap o-layout">
-		<div class="o-header u-align-center">
-			<h2>Clients</h2>
-		</div>
-		
-		<div class="c-regular u-buffer--quarter">
-			<blockquote>
-				<p>
-We are proud to be the producers of frozen potato products for  such leading brands as Aviko, Farm Frites and McDonald's.
-				</p>
-			</blockquote>
-			
-			<p>
-In 2006 marketing and sales departments of Aviko and Farm Frites were separated from FFP what led to a change in the company structure. Both brands now operate as  separate legal entities. Nevertheless, as founding companies, they have retained shares in FFP and are its principal owners.
-			</p>
-		</div>
-		
-		<div class="c-clients">	
-			<div class="c-clients__item">		
-				<div class="c-clients__details">
-					<div class="c-clients__logo">
-						<img src="img/_logo-farmfrites.png" alt="farmfrites" class="o-media" />
-					</div>
-					
-					<div class="c-clients__facts">
-						<ul>
-							<li class="o-serif">Farm Frites</li>
-							
-							<li>Shareholder of Farm Frites Poland SA</li>
-							<li>Established in 1971</li>
-							<li>Simple as that</li>
-							<li>No need to read whole right column, unless you need in-depth info</li>
-						</ul>
+				<div class="c-timeline">
+					<dl class="clear">
+						<dt>1993</dt>
 						
-						<a href="#" class="icon-link"></a>
-					</div>
-				</div>
-				
-				<div class="c-clients__text c-regular">
-					<p>
-	Farm Frites is one of FFP's two shareholders. The company was established in 1971 in Oudenhoorn in the Netherlands by Gerrit de Bruijne. Initially the plant produced 700 tons of fresh French fries annually. In 1975, following further investments, production increased to 7.500 tons annually and it has been rising ever since. Other key events - impacting the development of  Farm Frites in the world - were the establishement of a joint venture enterprise in Egypt in 1989, starting business in Argentina in 1996 and setting up a strategic alliance in 1999 with Simplot, the US potato processor.
-					</p>
+						<dd>
+							<p>
+	It was established in 1993 as a joint venture of two Dutch potato processing producers: Farm Frites and Aviko. A factory was built and a line of French fries initiated in the autumn of 1994, within twelve months  of the start of construction.
+	The decision to locate the factory in Lębork was influenced by the favourable climate and appropriate soil conditions classified as "First Zone for Healthy Potatoes". An added bonus was Lębork authorities' positive approach to the venture which they recognized as a development opportunity for the town.
+							</p>
+						</dd>
+					</dl>
 					
-					<p>
-	Currently, Piet de Bruijne, son of Gerrit, iheads this ever independent and family run company. With its 8 production plants (in Europe, Egypt and Argentina) and 17 sales offices (e.g. in China, Guatemala, Brasil and Poland), Farm Frites employs 1.800 people and sells its products to over 40 countries around the world.
-					</p>
-					
-					<p>
-	Every year over 1.500.000 tons of potatoes are processed into 30 different potato products. A traditional appearance and full-bodied flavour typify all Farm Frites products.
-					</p>
-	
-					<p>
-	Food service market is a key element of the company's activities A major factor in maintaining a leading position on the market is the company's close ties with its clients and its ability to adapt to the expectations of the local market. This, together with its experience and knowledge in the field of potato cultivation and processing, helps to keep the customer satisfied.
-	Similarly, this specialization in its food service offer has helped Farm Frites become the  exclusive supplier of French fries to the McDonald's restaurants chains in Egypt and Argentina.
-					</p>
-				</div>
-			</div>
-			
-			<div class="c-clients__item">		
-				<div class="c-clients__details">
-					<div class="c-clients__logo">
-						<img src="img/_logo-aviko.png" alt="farmfrites" class="o-media" />
-					</div>
-					
-					<div class="c-clients__facts">
-						<ul>
-							<li class="o-serif">Farm Frites</li>
-							
-							<li>Shareholder of Farm Frites Poland SA</li>
-							<li>Established in 1971</li>
-							<li>Simple as that</li>
-							<li>No need to read whole right column, unless you need in-depth info</li>
-						</ul>
+					<dl class="clear">
+						<dt>1994</dt>
 						
-						<a href="#" class="icon-link"></a>
-					</div>
+						<dd>
+							<p>
+	Initially, FFP employed 80 workers, including a few specialists from Holland who were responsible for implementing the  international production standards and for training their Polish successors. The annual potato processing amounted to 40.000 tons.
+							</p>
+						</dd>
+					</dl>
+					
+					<dl class="clear">
+						<dt>2004</dt>
+						
+						<dd>
+							<p>
+	In July 2004, a new line for potato pancakes was introduced and in July 2011, a new line for potato flakes. Currently, three modern production lines enable the factory to process around 60 different types of product, which find their way to the tables of individual consumers and restaurants in numerous European countries and beyond.<br />
+	At present, there are 211 people working at Farm Frites Poland SA, and the amount of potatoes used for production annually exceeds 200.000 tons.					
+							</p>
+						</dd>
+					</dl>
+					
+					<dl class="clear">
+						<dt>2008</dt>
+						
+						<dd>
+							<p>
+	Since 2008, FFP has been a member of European Potato Processors' Association (EUPPA) and Sustainable Agriculture Initiative (SAI) Platform.
+	With our presence on the market for many years, our company still has many new ideas and ventures we hope to embark upon. With the experience and strong technical support we have at hand, and our wonderful workforce, we are confident we will be able to satisfy the evolving needs of customers expectations												</p>
+						</dd>
+					</dl>
 				</div>
 				
-				<div class="c-clients__text c-regular">
-					<p>
-	Farm Frites is one of FFP's two shareholders. The company was established in 1971 in Oudenhoorn in the Netherlands by Gerrit de Bruijne. Initially the plant produced 700 tons of fresh French fries annually. In 1975, following further investments, production increased to 7.500 tons annually and it has been rising ever since. Other key events - impacting the development of  Farm Frites in the world - were the establishement of a joint venture enterprise in Egypt in 1989, starting business in Argentina in 1996 and setting up a strategic alliance in 1999 with Simplot, the US potato processor.
-					</p>
-					
-					<p>
-	Currently, Piet de Bruijne, son of Gerrit, iheads this ever independent and family run company. With its 8 production plants (in Europe, Egypt and Argentina) and 17 sales offices (e.g. in China, Guatemala, Brasil and Poland), Farm Frites employs 1.800 people and sells its products to over 40 countries around the world.
-					</p>
-					
-					<p>
-	Every year over 1.500.000 tons of potatoes are processed into 30 different potato products. A traditional appearance and full-bodied flavour typify all Farm Frites products.
-					</p>
-	
-					<p>
-	Food service market is a key element of the company's activities A major factor in maintaining a leading position on the market is the company's close ties with its clients and its ability to adapt to the expectations of the local market. This, together with its experience and knowledge in the field of potato cultivation and processing, helps to keep the customer satisfied.
-	Similarly, this specialization in its food service offer has helped Farm Frites become the  exclusive supplier of French fries to the McDonald's restaurants chains in Egypt and Argentina.
-					</p>
-				</div>
-			</div>
-		</div><!-- /clients -->
-	</div>
-		
-		
-		
-	<div class="c-footer">
-		<div class="o-wrap">
-		
-			<ul class="c-footer__content clear">
-				<li class="c-footer__item">
-					<a href="#" class="c-logo">
-						<img src="img/svg/ff-white.svg" alt="farm frites poland" class="o-media" />
-					</a>
-				</li>
 				
-				<li class="c-footer__item">
-					<p class="c-footer__copyrights">
-						Farm Frites Poland SA 2016<br />
-						All rights reserved.    
-					</p>
-				</li>
 				
-				<li class="c-footer__item">
-					<nav class="c-nav-footer">
-						<ul>
-							<li>
-								<a href="#">Site map</a>
-							</li>
-							
-							<li>
-								<a href="#">Privacy Policy</a>
-							</li>
-							
-							<li>
-								<a href="#">Site rules</a>
-							</li>
-						</ul>
-					</nav>
-				</li>
-			</ul>
-			
-			<div class="c-footer__bottom u-align-center">
-				design: <a href="#">Crystalvision</a>    responsive coding: <a href="#">8ball Interactive</a>
+				
 			</div>
-			
-			<nav class="c-nav-social">
-				<ul>
-					<li>
-						<a href="#" class="icon-google-plus"></a>
-					</li>
-					
-					<li>
-						<a href="#" class="icon-facebook"></a>
-					</li>
-					
-					<li>
-						<a href="#" class="icon-twitter"></a>
-					</li>
-					
-					<li>
-						<a href="#" class="icon-youtube-play"></a>
-					</li>					
-				</ul>
-			</nav>
 		</div>
-	</div>
 
-</div>
+
+		<div class="o-wrap o-layout js-section" id="certificates-and-rewards">
+			<div class="o-header u-align-center">
+				<h2>Certificates and rewards</h2>
+			</div>
+			
+			<div class="c-regular u-buffer--quarter">
+				<blockquote>
+					<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at faucibus lacus. Nulla vel convallis lacus. Cras nec efficitur dui. Maecenas placerat purus tellus, quis molestie nisl rhoncus vitae. Proin iaculis nisi et convallis placerat. Maecenas felis mauris,				</p>
+				</blockquote>
+			</div>
+			
+			<div class="c-certs">
+				<dl>
+					<dt>
+						<div class="c-certs__doc">
+							<img src="img/_cert.jpg" alt="" class="o-media" />
+						</div>
+					</dt>
+					
+					<dd>
+						<h5 class="u-bb">Quality Management - BS EN ISO 22000:2005</h5>
+						<p>
+						Issued in September 2010 by SAI Global and recirtified in June 2013. It confirms that our company meets the highest standards relating to the food safety. 
+							<a href="#" class="icon-search"></a>
+						</p>
+					</dd>
+				</dl>
+				
+				<dl>
+					<dt>
+						<div class="c-certs__doc">
+							<img src="img/_cert.jpg" alt="" class="o-media" />
+						</div>
+					</dt>
+					
+					<dd>
+						<h5 class="u-bb">Quality Management - BS EN ISO 22000:2005</h5>
+						<p>
+						Issued in September 2010 by SAI Global and recirtified in June 2013. It confirms that our company meets the highest standards relating to the food safety. 
+							<a href="#" class="icon-search"></a>
+						</p>
+					</dd>
+				</dl>
+				
+				<dl>
+					<dt>
+						<div class="c-certs__doc">
+							<img src="img/_cert.jpg" alt="" class="o-media" />
+						</div>
+					</dt>
+					
+					<dd>
+						<h5 class="u-bb">Quality Management - BS EN ISO 22000:2005</h5>
+						<p>
+						Issued in September 2010 by SAI Global and recirtified in June 2013. It confirms that our company meets the highest standards relating to the food safety. 
+							<a href="#" class="icon-search"></a>
+						</p>
+					</dd>
+				</dl>
+				
+				<dl>
+					<dt>
+						<div class="c-certs__doc">
+							<img src="img/_cert.jpg" alt="" class="o-media" />
+						</div>
+					</dt>
+					
+					<dd>
+						<h5 class="u-bb">Quality Management - BS EN ISO 22000:2005</h5>
+						<p>
+						Issued in September 2010 by SAI Global and recirtified in June 2013. It confirms that our company meets the highest standards relating to the food safety. 
+							<a href="#" class="icon-search"></a>
+						</p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+
+		<div class="o-wrap o-layout js-section" id="clients">
+			<div class="o-header u-align-center">
+				<h2>Clients</h2>
+			</div>
+			
+			<div class="c-regular u-buffer--quarter">
+				<blockquote>
+					<p>
+	We are proud to be the producers of frozen potato products for  such leading brands as Aviko, Farm Frites and McDonald's.
+					</p>
+				</blockquote>
+				
+				<p>
+	In 2006 marketing and sales departments of Aviko and Farm Frites were separated from FFP what led to a change in the company structure. Both brands now operate as  separate legal entities. Nevertheless, as founding companies, they have retained shares in FFP and are its principal owners.
+				</p>
+			</div>
+			
+			<div class="c-clients">	
+				<div class="c-clients__item">		
+					<div class="c-clients__details">
+						<div class="c-clients__logo">
+							<img src="img/_logo-farmfrites.png" alt="farmfrites" class="o-media" />
+						</div>
+						
+						<div class="c-clients__facts">
+							<ul>
+								<li class="o-serif">Farm Frites</li>
+								
+								<li>Shareholder of Farm Frites Poland SA</li>
+								<li>Established in 1971</li>
+								<li>Simple as that</li>
+								<li>No need to read whole right column, unless you need in-depth info</li>
+							</ul>
+							
+							<a href="#" class="icon-link"></a>
+						</div>
+					</div>
+					
+					<div class="c-clients__text c-regular">
+						<p>
+		Farm Frites is one of FFP's two shareholders. The company was established in 1971 in Oudenhoorn in the Netherlands by Gerrit de Bruijne. Initially the plant produced 700 tons of fresh French fries annually. In 1975, following further investments, production increased to 7.500 tons annually and it has been rising ever since. Other key events - impacting the development of  Farm Frites in the world - were the establishement of a joint venture enterprise in Egypt in 1989, starting business in Argentina in 1996 and setting up a strategic alliance in 1999 with Simplot, the US potato processor.
+						</p>
+						
+						<p>
+		Currently, Piet de Bruijne, son of Gerrit, iheads this ever independent and family run company. With its 8 production plants (in Europe, Egypt and Argentina) and 17 sales offices (e.g. in China, Guatemala, Brasil and Poland), Farm Frites employs 1.800 people and sells its products to over 40 countries around the world.
+						</p>
+						
+						<p>
+		Every year over 1.500.000 tons of potatoes are processed into 30 different potato products. A traditional appearance and full-bodied flavour typify all Farm Frites products.
+						</p>
+		
+						<p>
+		Food service market is a key element of the company's activities A major factor in maintaining a leading position on the market is the company's close ties with its clients and its ability to adapt to the expectations of the local market. This, together with its experience and knowledge in the field of potato cultivation and processing, helps to keep the customer satisfied.
+		Similarly, this specialization in its food service offer has helped Farm Frites become the  exclusive supplier of French fries to the McDonald's restaurants chains in Egypt and Argentina.
+						</p>
+					</div>
+				</div>
+				
+				<div class="c-clients__item">		
+					<div class="c-clients__details">
+						<div class="c-clients__logo">
+							<img src="img/_logo-aviko.png" alt="farmfrites" class="o-media" />
+						</div>
+						
+						<div class="c-clients__facts">
+							<ul>
+								<li class="o-serif">Farm Frites</li>
+								
+								<li>Shareholder of Farm Frites Poland SA</li>
+								<li>Established in 1971</li>
+								<li>Simple as that</li>
+								<li>No need to read whole right column, unless you need in-depth info</li>
+							</ul>
+							
+							<a href="#" class="icon-link"></a>
+						</div>
+					</div>
+					
+					<div class="c-clients__text c-regular">
+						<p>
+		Farm Frites is one of FFP's two shareholders. The company was established in 1971 in Oudenhoorn in the Netherlands by Gerrit de Bruijne. Initially the plant produced 700 tons of fresh French fries annually. In 1975, following further investments, production increased to 7.500 tons annually and it has been rising ever since. Other key events - impacting the development of  Farm Frites in the world - were the establishement of a joint venture enterprise in Egypt in 1989, starting business in Argentina in 1996 and setting up a strategic alliance in 1999 with Simplot, the US potato processor.
+						</p>
+						
+						<p>
+		Currently, Piet de Bruijne, son of Gerrit, iheads this ever independent and family run company. With its 8 production plants (in Europe, Egypt and Argentina) and 17 sales offices (e.g. in China, Guatemala, Brasil and Poland), Farm Frites employs 1.800 people and sells its products to over 40 countries around the world.
+						</p>
+						
+						<p>
+		Every year over 1.500.000 tons of potatoes are processed into 30 different potato products. A traditional appearance and full-bodied flavour typify all Farm Frites products.
+						</p>
+		
+						<p>
+		Food service market is a key element of the company's activities A major factor in maintaining a leading position on the market is the company's close ties with its clients and its ability to adapt to the expectations of the local market. This, together with its experience and knowledge in the field of potato cultivation and processing, helps to keep the customer satisfied.
+		Similarly, this specialization in its food service offer has helped Farm Frites become the  exclusive supplier of French fries to the McDonald's restaurants chains in Egypt and Argentina.
+						</p>
+					</div>
+				</div>
+			</div><!-- /clients -->
+		</div>
+
+
+		<div class="c-footer">
+			<div class="o-wrap">
+			
+				<ul class="c-footer__content clear">
+					<li class="c-footer__item">
+						<a href="#" class="c-logo">
+							<img src="img/svg/ff-white.svg" alt="farm frites poland" class="o-media" />
+						</a>
+					</li>
+					
+					<li class="c-footer__item">
+						<p class="c-footer__copyrights">
+							Farm Frites Poland SA 2016<br />
+							All rights reserved.    
+						</p>
+					</li>
+					
+					<li class="c-footer__item">
+						<nav class="c-nav-footer">
+							<ul>
+								<li>
+									<a href="#">Site map</a>
+								</li>
+								
+								<li>
+									<a href="#">Privacy Policy</a>
+								</li>
+								
+								<li>
+									<a href="#">Site rules</a>
+								</li>
+							</ul>
+						</nav>
+					</li>
+				</ul>
+				
+				<div class="c-footer__bottom u-align-center">
+					design: <a href="#">Crystalvision</a>    responsive coding: <a href="#">8ball Interactive</a>
+				</div>
+				
+				<nav class="c-nav-social">
+					<ul>
+						<li>
+							<a href="#" class="icon-google-plus"></a>
+						</li>
+						
+						<li>
+							<a href="#" class="icon-facebook"></a>
+						</li>
+						
+						<li>
+							<a href="#" class="icon-twitter"></a>
+						</li>
+						
+						<li>
+							<a href="#" class="icon-youtube-play"></a>
+						</li>					
+					</ul>
+				</nav>
+			</div>
+		</div>
+	
+	</div><!-- /page -->
+	
+	
+	<nav class="c-nav-dots js-dots"></nav>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" data-headjs-load="js/init.js"></script>

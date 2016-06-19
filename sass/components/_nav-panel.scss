@@ -1,4 +1,85 @@
 .c-nav-panel {
-	width: 360px;
-	background-color: #5c5854;
+	@include hover;
+	@include animfix;
+	@include transform(translate(360px, 0));
+	position: fixed;
+	right: 0; top: 0; z-index: 29;
+	width: 360px; height: 100%;
+	background-color: $black--brightest;
+	text-align: center;
+	
+	&.is-active {
+		@include transform(translate(0, 0));
+	}
+
+	&__menu {
+		position: absolute;
+		left: 0; top: 72px; z-index: 5;
+		width: 100%;
+		
+		> .is-active {
+			.sub-menu {
+				border-right: 6px solid $orange;
+
+				li {
+					a {
+						padding-left: 6px;
+					}
+
+					&.is-active {
+						a {
+							@include gradient(#fa9017, #ef7411, 180deg);
+							position: relative;
+							color: white;
+							
+							&:before {
+								@include antialias;
+								position: absolute;
+								left: 10px;
+								top: -3px;
+								display: block;
+								content: '«';
+								font: {
+									size: 32px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__top {
+		@include box-shadow( #423e3b 0 -1px 0 inset );
+		position: relative; z-index: 10;
+		height: 72px;
+		background-color: $black--brighter;
+		border-bottom: 1px solid #6b6864;
+		padding-top: 10px;
+	}
+	
+	a {
+		@include box-shadow( #423e3b 0 -1px 0 inset );
+		display: block;
+		background-color: $black--brightest;
+		padding: 12px 0;
+		border-bottom: 1px solid #6b6864;
+		color: #ccc;
+		
+		&:hover {
+			color: white;
+		}
+
+		&.has-submenu {
+			background-color: $black--brighter;
+			text-transform: uppercase;
+			color: #999;
+		}
+	}
+	
+	@media screen and ( max-width: 360px ) {
+		width: 100%;
+	}
 }
+

@@ -1,0 +1,29 @@
+.c-nav-dots {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 30;
+	height: 100%;
+	
+	ul {
+		@include scut-center-transform(y);
+		left: 15px;
+		
+		li {
+			@include border-radius( 50% );
+			width: 16px; height: 16px;
+			background-color: white;
+			border: 2px solid $black--brightest;
+			margin-bottom: 10px;
+			cursor: pointer;
+			
+			&.is-active {
+				background-color: $black--brightest;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		display: none;
+	}
+}

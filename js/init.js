@@ -16,6 +16,7 @@ head.js('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js', fun
 		
 		exist('.owl-carousel') && owl_load();	
 	})
+	.js('https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
 	.js('https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
 	.js('js/main.js');
 

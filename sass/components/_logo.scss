@@ -5,6 +5,12 @@
 		width: 93px;
 	}
 	
+	.c-nav-panel & {
+		@include opacity(.5);
+		width: 98px;
+		margin: 0 auto;
+	}
+	
 	.c-topbar & {
 		left: 15px;
 		width: 112px;

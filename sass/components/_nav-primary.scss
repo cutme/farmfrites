@@ -4,7 +4,14 @@
 	right: 80px;
 	
 	li {
-		float: left;		
+		float: left;	
+		
+		&.is-active {
+			a {
+				background-color: #e1e0dd;
+				color: $gray--darker;
+			}
+		}	
 	}
 
 	a {
@@ -16,7 +23,7 @@
 		color: $orange;
 		
 		&:hover  {
-			background-color: $gray;
+			background-color: lighten($gray, 5%);
 			color: $gray--darker;
 		}
 	}

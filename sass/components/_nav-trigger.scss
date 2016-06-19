@@ -49,10 +49,19 @@
 }
 
 .c-nav-trigger {
+	position: fixed;
+    top: 14px;
+    right: 0;
+    z-index: 30;
+    width: 36px; height: 36px;
 	outline: none;
 	display: block;
+	
+/*
+
 	right: 20px;
 	z-index: 10;
-	width: 36px; height: 36px;
+	
 	margin-top: -3px !important;
+*/
 }
