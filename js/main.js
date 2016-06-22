@@ -199,7 +199,7 @@ jQuery(function($) {
 				});
 			}
 
-			if $('html').hasClass('no-mobile') {
+			if ($('html').hasClass('no-mobile')) {
 				scrollit();
 			}
 			
