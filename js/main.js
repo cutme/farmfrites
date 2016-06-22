@@ -199,7 +199,10 @@ jQuery(function($) {
 				});
 			}
 
-			scrollit();
+			if $('html').hasClass('no-mobile') {
+				scrollit();
+			}
+			
 			exist('.js-section') && check_on_panel_menu($('.js-section'));
 		},
 		navDots: function() {
