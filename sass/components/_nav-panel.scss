@@ -9,6 +9,10 @@
 	text-align: center;
 	webkit-overflow-scrolling: touch;
 	
+	.mobile {
+		overflow: scroll;
+	}
+	
 	&.is-active {
 		@include transform(translate(0, 0));
 	}
