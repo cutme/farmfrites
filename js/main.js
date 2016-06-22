@@ -150,7 +150,7 @@ jQuery(function($) {
 				$(this).toggleClass('is-active');
 				$('.o-page, .c-topbar__content').toggleClass('is-moved');
 				$('.c-nav-panel').toggleClass('is-active');
-				$('body').toggleClass('with-shadow');
+				$('body').toggleClass('with-shadow fixed');
 			});
 
 			function check_on_panel_menu(obj) {

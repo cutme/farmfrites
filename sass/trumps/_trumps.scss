@@ -24,6 +24,10 @@ body {
 			}
 		}		
 	}
+	
+	&.fixed {
+		overflow: hidden;
+	}
 }
 
 .mfp-close-btn-in .mfp-close {
