@@ -227,7 +227,7 @@ jQuery(function($) {
 				if ($(id).length > 0) {
 					$('.o-page, .c-topbar__content').removeClass('is-moved');
 					$('.c-nav-panel, .js-nav').removeClass('is-active');
-					$('body').removeClass('with-shadow');
+					$('body').removeClass('with-shadow fixed');
 					goToTarget(id);
 				}
 			});

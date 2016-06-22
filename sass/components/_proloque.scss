@@ -9,6 +9,10 @@
 		font-size: em(16);
 	}
 	
+	@media screen and ( max-width: 768px ) {
+		width: 100%;
+	}
+	
 	@media screen and ( max-width: 480px ) {
 		padding: 25px 0;
 	}
