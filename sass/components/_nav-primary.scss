@@ -1,7 +1,7 @@
 .c-nav-primary {
 	position: absolute;
 	top: 0;
-	right: 80px;
+	right: 120px;
 	
 	li {
 		float: left;	
@@ -28,7 +28,11 @@
 		}
 	}
 	
-	@media screen and ( max-width: 475px ) {
+	@media screen and ( max-width: 1180px ) {
+		right: 170px;
+	}
+
+	@media screen and ( max-width: 640px ) {
 		display: none;
 	}
 	
