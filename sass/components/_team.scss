@@ -1,21 +1,25 @@
 .c-team {
-	
+
+	&__link {
+		&:hover {
+			.o-media {
+				@include opacity(.8);
+			}
+		}
+	}
+
 	&__photos {
 		li {
 			float: left;
 			width: grid(230, 520);
 			margin-bottom: 80px;
 			text-align: center;
-			
+
 			&:nth-child(even) {
 				float: right;
 			}
-			
-			&:nth-child(2n+1) {
-			//	clear: left;
-			}
 		}
-		
+
 		.o-media {
 			@include border-radius( 50% );
 			margin-bottom: 25px;
@@ -26,15 +30,24 @@
 	&__name {
 		@include flexbox;
 		@include align-items(flex-end);
-		height: 60px;
+		height: 70px;
 		padding-bottom: 15px;
-		border-bottom: 2px solid rgba($gray--darker, .5);
 		margin-bottom: 15px;
 		font-size: em(18);
+		
+		.c-modal & {
+			font-size: em(20);
+		}
 		
 		span {
 			display: block;
 			width: 100%;
+		}
+		
+		.c-modal & {
+		    margin-bottom: 5px;
+		    padding-bottom: 0;
+		    color: $black;
 		}
 	}
 	
@@ -43,9 +56,14 @@
 			style: italic;
 			size: em(16);
 		}
+		
+		.c-modal & {
+			padding-right: 60px;
+		}
 	}
 	
 	.o-media {
+		@include hover;
 		margin: 0 auto;
 	}
 	

@@ -26,6 +26,18 @@ body {
 	}
 }
 
+.mfp-close-btn-in .mfp-close {
+	font-size: 64px !important;
+	font-weight: $light;
+	font-family: $sans-serif;
+	margin: 45px 20px 0 0;
+	color: #f97812 !important;
+}
+
+.imgcanvas {
+	margin-bottom: 20px;
+}
+
 .is-moved {
 	@include transform(translate(-360px, 0));
 }
@@ -55,11 +67,25 @@ body {
 .u-float-left {
 	float: left;
 	margin: 0 50px 20px 0;
+	
+	.c-regular & {
+		@media screen and ( max-width: 600px ) {
+			float: none;
+			margin: 0 auto;
+		}
+	}
 }
 
 .u-float-right {
 	float: right;
 	margin: 0 0 20px 50px;
+	
+	.c-regular & {
+		@media screen and ( max-width: 600px ) {
+			float: none;
+			margin: 0 auto;
+		}
+	}
 }
 
 .u-more {
@@ -97,8 +123,6 @@ body {
 	@include scut-center-transform(y);
 }
 
-
-
 .safari {
 	* {
 		-webkit-backface-visibility: hidden;
@@ -106,8 +130,9 @@ body {
 	}
 }
 
-@media screen and ( min-width: 768px ) {
+@media screen and ( min-width: 481px ) {
 	.owl-carousel {
 		display: block !important; // owl carousel overwrite
 	}
 }
+

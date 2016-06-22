@@ -81,6 +81,27 @@ jQuery(function($) {
 				});
 			});
 		},
+		modalPopup: function() {
+			$('.js-popup-modal').magnificPopup({
+				type: 'inline',
+
+				fixedContentPos: false,
+				fixedBgPos: true,
+				
+				overflowY: 'auto',
+				
+				closeBtnInside: true,
+				preloader: false,
+				
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+			$(document).on('click', '.popup-modal-dismiss', function (e) {
+				e.preventDefault();
+				$.magnificPopup.close();
+			});
+		},
 		slogans: function() {
 			var o = $('.c-slogans'),
 				i = $('.c-slogans__item'),
@@ -97,6 +118,8 @@ jQuery(function($) {
 		init: function() {
 			exist('.js-slogans') && L.slogans();
 			exist('.js-map') && L.googleMap();
+			exist('.js-popup-modal') && L.modalPopup();
+			
 		}
 	};
 	var N = {
@@ -177,7 +200,7 @@ jQuery(function($) {
 			}
 
 			scrollit();
-			check_on_panel_menu($('.js-section'));
+			exist('.js-section') && check_on_panel_menu($('.js-section'));
 		},
 		navDots: function() {
 		
@@ -228,7 +251,7 @@ jQuery(function($) {
 			}
 
 			function init() {
-				if (window_smaller_than(768)) {
+				if (window_smaller_than(481)) {
 					if (status === false) {
 						setTimeout(function() {
 							startOwl();
@@ -245,7 +268,7 @@ jQuery(function($) {
 			$(window).resize(debouncer(function(e) {
 				init();
 			}));
-			if (window_smaller_than(768)) {
+			if (window_smaller_than(481)) {
 				status = true;
 				startOwl();
 			} else {

@@ -1,11 +1,48 @@
-.c-top {
+.c-top {	
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 50px;
-	//margin-top: 72px;
+	background-color: #f9b31f;
+	
+	// gradient apla
+
+	&:after {
+		@include opacity(.5);
+		position: absolute;
+		left: 0; top: 0; z-index: 2;
+		display: block;
+		width: 100%; height: 100%;
+		content: ' ';
+		
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#db211b+0,db211b+99&0.25+0,1+100 */
+background: -moz-radial-gradient(center, ellipse cover, rgba(219,33,27,0.25) 0%, rgba(219,33,27,0.99) 99%, rgba(219,33,27,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(219,33,27,0.25) 0%,rgba(219,33,27,0.99) 99%,rgba(219,33,27,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(219,33,27,0.25) 0%,rgba(219,33,27,0.99) 99%,rgba(219,33,27,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40db211b', endColorstr='#db211b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	}
+
+	&__photo {
+		@include background-size(cover);
+		@include opacity(.15);
+		position: absolute;
+		left: 0; top: 0;
+		z-index: 1;
+		width: 100%; height: 100%;
+		background-position: center;		
+	}
 
 	&--home {
+		max-width: 1280px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
 		min-height: 525px;
+		
+		.c-top__photo {
+			background-image: url(../img/top/home2.jpg);
+		}
 		
 		@media screen and ( max-width: 767px ) {
 			min-height: 100px;
