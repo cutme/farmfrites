@@ -116,7 +116,7 @@ jQuery(function($) {
 			});
 		},
 		init: function() {
-			exist('.js-slogans') && L.slogans();
+			//exist('.js-slogans') && L.slogans();
 			exist('.js-map') && L.googleMap();
 			exist('.js-popup-modal') && L.modalPopup();
 			
