@@ -13,6 +13,11 @@ function debouncer(func, timeout) {
 	};
 }
 
+function getScreenHeight() {
+	sh = document.documentElement.clientHeight;
+	return sh;
+}
+
 function goToTarget(target) {
 	var v = $('html, body'),
 		o = $(target).offset().top - 100;
@@ -81,6 +86,21 @@ jQuery(function($) {
 				});
 			});
 		},
+		imgCanvas: function() {
+			var el = $('.imgcanvas');
+			function init() {
+				el.each(function() {
+					$('img', this).attr('style', '');
+					var h = $(this).height();				
+					if (h > getScreenHeight() - 72) {
+						$('img', this).css('max-height', getScreenHeight() - 72);
+					}
+				});
+			}
+			$(window).resize(debouncer(function(e) {
+				init();
+			}));
+		},
 		modalPopup: function() {
 			$('.js-popup-modal').magnificPopup({
 				type: 'inline',
@@ -102,6 +122,143 @@ jQuery(function($) {
 				$.magnificPopup.close();
 			});
 		},
+		pageNav: function() {
+			var el = $('.js-pagenav'),
+				n = $('.c-nav-page__arrow--down', el),
+				p = $('.c-nav-page__arrow--up', el),
+				b = $('body'),
+				t = $('.c-topbar'),
+				w = $(window);
+
+			var shadow_bottom = 'with-shadow--bottom',
+				shadow_top = 'c-topbar--shadow';
+				
+			
+			
+			function getPageHeight() {
+				ph = $('.o-page').outerHeight();
+				return ph;
+			}
+			
+			function getScrollPosition() {
+				sp = w.scrollTop();
+				return sp;
+			}
+			
+			function nav_bottom(r) {				
+				if (r === false) {
+					n.fadeOut();
+					b.removeClass(shadow_bottom);
+				} else {
+					n.fadeIn();
+					b.addClass(shadow_bottom);
+				}
+			}
+			function nav_top(r) {
+				if (r === false) {
+					t.removeClass(shadow_top);
+					p.fadeOut();
+				} else {
+					t.addClass(shadow_top);
+					p.fadeIn();
+				}
+			}
+			
+			function pos_calc(a) {
+			
+				if (a == 'down') {
+
+					// czy caly ekran
+					if ( (ph - sp - sh) > sh ) {
+						d = sp + sh - 72;
+					} else {
+						d = sp + ( ph - sp - sh );
+						nav_bottom();
+					}
+				} else {
+				
+					// czy caly ekran
+					if ( sp >= sh ) {
+						d = sp - sh;
+					} else {
+						d = 0;
+						p.fadeOut();
+						t.removeClass(shadow_top);
+					}				
+				}				
+				return d;
+			}
+
+			function init() {
+				if (( (ph - sp) > 0 ) && (sp != ph - sh) ) {
+					nav_bottom();
+				}
+				
+				if (( !t.hasClass(shadow_top)) && (sp != 0) ) {
+					nav_top();
+				}
+				
+				// Scroll Event
+				w.scroll(debouncer, function() {
+					ph = getPageHeight();
+					sh = getScreenHeight();
+					sp = getScrollPosition();
+
+					if ( sp != 0) {
+						nav_top();
+					} else {
+						nav_top(false);
+					}
+					
+					if ( sp + sh == ph ) {
+						nav_bottom(false);
+					} else {
+						nav_bottom();
+					}
+				});
+			}
+			
+			var ph = getPageHeight(),
+				sh = getScreenHeight(),
+				sp = getScrollPosition(),
+				d;
+			
+			// strzalka dolna
+			n.on('click', function(e) {
+				e.preventDefault();
+				//ph = getPageHeight(),
+				//sh = getScreenHeight(),
+				//sp = getScrollPosition();
+					
+				b.animate({
+					scrollTop: pos_calc('down')
+				}, {
+					duration: 1000,
+					easing: 'easeOutCubic'
+				});
+				
+				//nav_top();
+			});
+			
+			// strzalka gorna
+			p.on('click', function(e) {
+				e.preventDefault();
+				//ph = getPageHeight(),
+				//sh = getScreenHeight(),
+				//sp = getScrollPosition();
+					
+				b.animate({
+					scrollTop: pos_calc('up')
+				}, {
+					duration: 1000,
+					easing: 'easeOutCubic'
+				});	
+
+				//nav_bottom();
+			});
+			
+			init();
+		},
 		slogans: function() {
 			var o = $('.c-slogans'),
 				i = $('.c-slogans__item'),
@@ -118,8 +275,9 @@ jQuery(function($) {
 		init: function() {
 			//exist('.js-slogans') && L.slogans();
 			exist('.js-map') && L.googleMap();
+			exist('.js-pagenav') && L.pageNav();
 			exist('.js-popup-modal') && L.modalPopup();
-			
+			exist('.imgcanvas') && L.imgCanvas();
 		}
 	};
 	var N = {

@@ -1,0 +1,51 @@
+.c-nav-page {
+	&__arrow {
+		@include antialias;
+		@include border-radius( 50% );
+		position: fixed;
+		left: 50%; z-index: 30;
+		display: none;
+		width: 40px; height: 40px;
+		background-color: $black--brightest;
+		margin-left: -20px;		
+		text-align: center;
+		line-height: 40px;
+		font: {
+			size: em(36);
+			weight: $light;
+		}
+		color: white;
+	
+		&:after {
+			
+			display: block;
+			content: '»';
+		}
+		
+		&:hover {
+			background-color: $orange;
+			
+		}
+		
+		&:active {
+			@include transform(scale(1.2));
+		}
+		
+		&--down {
+			bottom: 20px;
+
+			&:after {
+				@include transform(rotate(90deg));
+				
+			}
+		}
+		
+		&--up {
+			top: 92px;
+			
+			&:after {
+				@include transform(rotate(-90deg));
+			}
+		}
+	}
+}
