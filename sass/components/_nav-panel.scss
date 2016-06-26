@@ -1,28 +1,56 @@
 .c-nav-panel {
 	@include hover;
 	@include animfix;
-	@include transform(translate(360px, 0));
 	position: fixed;
-	right: 0; top: 0; z-index: 29;
+	z-index: 29;
 	width: 360px; height: 100%;
 	background-color: $black--brightest;
 	text-align: center;
-	
-	
-	
-	
+
+	&--left {
+		@include transform(translate(-360px, 0));
+		top: 72px; left: 0;		
+		
+		@media screen and ( max-width: 1024px ) {
+			width: 260px;
+		}
+		
+	}
+
+	&--right {
+		@include transform(translate(360px, 0));
+		top: 0; right: 0;
+	}
+
 	&.is-active {
 		@include transform(translate(0, 0));
 	}
 
+	&__lead {
+		@include box-shadow( #423e3b 0 -1px 0 inset );
+		position: relative;
+		background-color: $black--brighter;
+		border-bottom: 1px solid #6b6864;
+		padding: 12px 15px;
+		text-align: left;
+		color: #999;
+	}
+
 	&__menu {
 		position: absolute;
-		left: 0; top: 72px; z-index: 5;
+		left: 0; z-index: 5;
 		width: 100%;
+		
+		.c-nav-panel--right & {
+			top: 72px;
+		}
 		
 		> .is-active {
 			.sub-menu {
-				border-right: 6px solid $orange;
+			
+				.c-nav-panel--right & {
+					border-right: 6px solid $orange;
+				}
 
 				li {
 					a {
@@ -38,14 +66,22 @@
 							&:before {
 								@include antialias;
 								position: absolute;
-								left: 10px;
 								top: -3px;
 								display: block;
-								content: '«';
 								font: {
 									size: 32px;
 								}
-							}
+								
+								.c-nav-panel--left & {
+									right: 10px;
+									content: '»';
+								}
+								
+								.c-nav-panel--right & {
+									left: 10px;
+									content: '«';
+								}
+							}							
 						}
 					}
 				}
@@ -79,6 +115,15 @@
 			text-transform: uppercase;
 			color: #999;
 		}
+	}
+	
+	.icon-close {
+		position: absolute;
+		top: 12px;
+	    right: 12px;
+		font-size: 18px;
+		color: $orange;
+		cursor: pointer;
 	}
 	
 	@media screen and ( max-width: 360px ) {

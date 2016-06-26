@@ -33,7 +33,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40db211b', e
 	}
 
 	&--home {
-		max-width: 1280px;
+		//max-width: 1280px;
+		width: 100%;
 		margin: {
 			left: auto;
 			right: auto;

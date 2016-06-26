@@ -3,7 +3,7 @@
 		@include antialias;
 		@include border-radius( 50% );
 		position: fixed;
-		left: 50%; z-index: 30;
+		left: 50%; z-index: 25;
 		display: none;
 		width: 40px; height: 40px;
 		background-color: $black--brightest;
@@ -23,8 +23,9 @@
 		}
 		
 		&:hover {
-			background-color: $orange;
-			
+			.no-mobile & {
+				background-color: $orange;
+			}
 		}
 		
 		&:active {
@@ -46,6 +47,14 @@
 			&:after {
 				@include transform(rotate(-90deg));
 			}
+		}
+		
+		&.is-centered {
+			margin-left: -200px;
+		}
+		
+		&.is-centered--right {
+			margin-left: 160px;
 		}
 	}
 }

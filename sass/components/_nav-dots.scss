@@ -2,23 +2,37 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 30;
+	z-index: 25;
 	height: 100%;
 	
-	ul {
+	.icon-hamburger {
+		display: block;
+		width: 19px; height: 15px;	
+		margin: 0 0 15px -1px;
+		cursor: pointer;
+		
+		@media screen and ( max-width: 640px ) {
+			display: none;
+		}
+		
+	}
+	
+	&__content {
 		@include scut-center-transform(y);
 		left: 15px;
-		
-		li {
-			@include border-radius( 50% );
-			width: 16px; height: 16px;
-			background-color: white;
-			border: 2px solid $black--brightest;
-			margin-bottom: 10px;
-			cursor: pointer;
 			
-			&.is-active {
-				background-color: $black--brightest;
+		ul {
+			li {
+				@include border-radius( 50% );
+				width: 16px; height: 16px;
+				background-color: white;
+				border: 2px solid $black--brightest;
+				margin-bottom: 10px;
+				cursor: pointer;
+				
+				&.is-active {
+					background-color: $black--brightest;
+				}
 			}
 		}
 	}

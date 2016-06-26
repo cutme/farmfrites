@@ -48,7 +48,9 @@ body {
 	}
 
 	&.fixed {
-		overflow: hidden;
+		@media screen and ( max-width: 480px ) {
+			overflow: hidden;
+		}		
 	}
 }
 
@@ -76,6 +78,14 @@ body {
 
 .is-moved {
 	@include transform(translate(-360px, 0));
+}
+
+.is-moved--right {
+	@include transform(translate(360px, 0));
+	
+	@media screen and ( max-width: 1024px ) {
+		@include transform(translate(260px, 0));
+	}
 }
 
 .u-align-center {
