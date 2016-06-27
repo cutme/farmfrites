@@ -14,7 +14,6 @@
 	[class^="icon-"] {
 		@include hover;
 		@include transition-duration(300ms);
-		//@include transition-timing-function(ease-out);
 	}
 
 	&__item,
@@ -32,8 +31,16 @@
 
 		&:nth-child(1) {
 			.c-slogans__photo {
-				&:before {
-					background-position: -100px -203px;
+				&:before {					
+					background-position: calc( -100px - 20px + ((100vw - 1080px)/2)) -203px;
+					
+					@media screen and ( min-width: 1081px ) {
+						background-position: -100px -203px;
+					}
+					
+					@media screen and ( min-width: 1280px ) {
+						background-position:  calc( -100px - ((100vw - 1280px)/2)) calc( -203px - ((100vw - 1280px)/2)/1.64);
+					}
 				}
 			}
 		}
@@ -41,7 +48,15 @@
 		&:nth-child(2) {
 			.c-slogans__photo {
 				&:before {
-					background-position: -370px -203px;
+					background-position: calc( -370px - 20px + (270px - 100%) + ((100vw - 1080px)/2)) -203px;
+					
+					@media screen and ( min-width: 1081px ) {
+						background-position: -370px -203px;
+					}
+					
+					@media screen and ( min-width: 1280px ) {
+						background-position:  calc( -370px - ((100vw - 1280px)/2)) calc( -203px - ((100vw - 1280px)/2)/1.64);
+					}					
 				}
 			}
 		}
@@ -49,7 +64,15 @@
 		&:nth-child(3) {
 			.c-slogans__photo {
 				&:before {
-					background-position: -640px -203px;
+					background-position: calc( -640px - 20px + 2 * (270px - 100%) + ((100vw - 1080px)/2)) -203px;
+					
+					@media screen and ( min-width: 1081px ) {
+						background-position: -640px -203px;
+					}
+					
+					@media screen and ( min-width: 1280px ) {
+						background-position: calc( -640px - ((100vw - 1280px)/2)) calc( -203px - ((100vw - 1280px)/2)/1.64);
+					}					
 				}
 			}
 		}
@@ -57,7 +80,15 @@
 		&:nth-child(4) {
 			.c-slogans__photo {
 				&:before {
-					background-position: -910px -203px;
+					background-position: calc( -910px - 20px + 3 * (270px - 100%) + ((100vw - 1080px)/2)) -203px;
+					
+					@media screen and ( min-width: 1081px ) {
+						background-position: -910px -203px;
+					}
+					
+					@media screen and ( min-width: 1280px ) {
+						background-position:  calc( -910px - ((100vw - 1280px)/2)) calc( -203px - ((100vw - 1280px)/2)/1.64);
+					}
 				}
 			}
 		}
@@ -79,7 +110,7 @@
 					}
 					
 					&:before {
-						@include transition-delay(700ms);
+						@include transition-delay(600ms);
 					}
 				}
 	
@@ -122,6 +153,14 @@
 			background: {
 				image: url(../img/top/home2.jpg);
 			}
+			
+			@media screen and ( min-width: 1280px ) {
+				@include background-size( 100vw auto );
+			}
+			
+			@media screen and ( max-width: 1280px ) {
+				@include background-size( 1280px auto );
+			}
 		}
 		
 		&:after,
@@ -137,6 +176,8 @@
 		// photo
 		&:before {
 			z-index: 5;
+			//display: none;
+			//background-color: white;
 		}
 		
 		// black
@@ -168,6 +209,10 @@
 	
 	.icon-production, .icon-environment {
 		font-size: em(64);
+	}
+	
+	.icon-environment {
+		line-height: 120px;
 	}
 
 	

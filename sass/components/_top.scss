@@ -33,7 +33,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40db211b', e
 	}
 
 	&--home {
-		//max-width: 1280px;
 		width: 100%;
 		margin: {
 			left: auto;
@@ -42,8 +41,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40db211b', e
 		min-height: 525px;
 		
 		.c-top__photo {
-			background-image: url(../img/top/home2.jpg);
+			background: {
+				image: url(../img/top/home2.jpg);
+			}
+			
+			@media screen and ( max-width: 1280px ) {
+				max-width: 1280px;
+				@include background-size( 1280px auto );
+				background-position: center;
+			}
 		}
+		
+		
 		
 		@media screen and ( max-width: 767px ) {
 			min-height: 100px;
