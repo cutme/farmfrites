@@ -272,6 +272,7 @@ jQuery(function($) {
 				$('.c-nav-panel--left').toggleClass('is-active');
 				$('.o-page').addClass('is-compressed is-moved--right');
 				$('.c-nav-page__arrow').addClass('is-centered--right');
+				$('.o-wrap').addClass('is-padding');
 				//p.addClass('');
 			});
 
@@ -279,6 +280,7 @@ jQuery(function($) {
 				$('.c-nav-panel--left').toggleClass('is-active');
 				$('.o-page').removeClass('is-compressed is-moved--right');
 				$('.c-nav-page__arrow').removeClass('is-centered--right');
+				$('.o-wrap').removeClass('is-padding');
 			});			
 		},
 		pageNav: function() {
